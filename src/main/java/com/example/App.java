@@ -25,5 +25,35 @@ public class App {
          * Es el nombre del metodo, lo que recibe como parametro, sin incluir lo que devuelve como parametro,
          * sin incluir lo que devuelve.
          */
+
+        /*
+         * HERENCIA:
+         * 
+         * Es un mecanismo mediante el cual una clase o interfaz hereda todos los miembros
+         * que sean public o protected.
+         * 
+         * Los contructores NO se heredan
+         */
+
+         Estudiante estudiante1 = new Estudiante();
+
+         estudiante1.setNombre("Ruben");
+         estudiante1.setGenero(Genero.HOMBRE);
+
+         System.out.println(estudiante1);
+
+         System.out.println("Estudiante2");
+         Estudiante estudiante2 = Estudiante.builder()
+         .nombre("Ivan")
+         .genero(Genero.HOMBRE)
+         .totalAsignaturas(10)
+         .build();
+         System.out.println(estudiante2);
+
+         // Intento crear un objeto de tipo Persona, siendo abstracta
+         // No es posible
+        // Persona persona = new Persona();
+
+
     }
 }
